@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.button.setOnClickListener {
+//            sendMessage(it)
             val intent = Intent(this, DisplayMessageActivity::class.java).apply {
                 putExtra(EXTRA_MESSAGE, binding.editText.text.toString())
             }
